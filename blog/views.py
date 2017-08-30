@@ -31,9 +31,9 @@ def handle_uploaded_file(f):
 
 def post_new(request):
 	if request.method == "POST":
-            form = PostForm(request.POST, request.FILES)
+            form = PostForm(request.POST)
             if form.is_valid():
-                handle_uploaded_file(request.FILES['image'])
+                #handle_uploaded_file(request.FILES['image'])
                 post = form.save(commit=False)
                 post.author = request.user
                 post.published_date = timezone.now()
