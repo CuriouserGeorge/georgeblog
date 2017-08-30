@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, render_to_response
 from django.utils import timezone
+from django.utils.safestring import mark_safe
 from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
@@ -20,7 +21,7 @@ def post_detail(request, pk):
 	post = get_object_or_404(Post, pk=pk)
 
 
-	return render(request, 'blog/post_detail.html', {'post': post})
+	return render(request, mark_safe('blog/post_detail.html'), {'post': post})
 
 def handle_uploaded_file(f):
     destination = open('media/iamge.jpeg', 'wb+')
