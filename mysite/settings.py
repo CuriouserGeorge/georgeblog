@@ -25,7 +25,7 @@ SECRET_KEY = 'ec^#@^$6v(3(i8949u09berm45-n+rrs^_j6(+2e+!8baqtb6j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'www.georgetimbrell.co.uk', 'webapp-327806.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'blog.georgetimbrell.co.uk', 'webapp-327806.pythonanywhere.com']
 
 
 # Application definition
